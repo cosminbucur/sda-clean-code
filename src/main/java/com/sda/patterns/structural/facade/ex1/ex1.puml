@@ -1,0 +1,18 @@
+@startuml
+
+'TODO this
+class Client
+
+note left of Parent: role
+interface Parent {
++execute()
+}
+
+class Child {
++execute()
+}
+
+Parent <|-- Child
+Client --> Parent
+
+@enduml

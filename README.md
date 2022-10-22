@@ -1,6 +1,5 @@
-# Upskill
+# Clean code
 
-https://github.com/cosminbucur/sda-upskill.git
+- [code](https://github.com/cosminbucur/sda-clean-code.git)
 
----
-
+- [goals](src/main/java/com/sda/GOALS.md)
