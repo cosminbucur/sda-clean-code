@@ -1,4 +1,12 @@
 # Code smells
+- rigidity - hard to change
+- fragility - a single change cause breakage
+- immobility - hard to separate code
+- viscosity - hack is faster
+- needless repetition - copy paste
+- opacity - difficult to understand
+- needless complexity - smart developers
+
 - [bloaters](code-smells/bloaters.md)
 - [dispensable](code-smells/dispensables.md)
 - [coupling](code-smells/coupling.md)
