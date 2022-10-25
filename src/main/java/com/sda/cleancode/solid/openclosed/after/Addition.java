@@ -1,6 +1,6 @@
 package com.sda.cleancode.solid.openclosed.after;
 
-public class Addition implements IOperation {
+public class Addition implements Operation {
 
     private double firstOperand;
     private double secondOperand;

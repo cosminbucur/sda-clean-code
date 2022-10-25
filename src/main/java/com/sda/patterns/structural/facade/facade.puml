@@ -1,18 +1,32 @@
 @startuml
 
-'TODO this
 class Client
 
-note left of Parent: role
-interface Parent {
-+execute()
+interface Facade {
++execute():void
 }
 
-class Child {
-+execute()
+
+class ConcreteFacade {
++execute():void
 }
 
-Parent <|-- Child
-Client --> Parent
+class Subsystem1 {
++operation1():void
+}
+
+class Subsystem2 {
++operation2():void
+}
+
+class Subsystem3 {
++operation3():void
+}
+
+Facade <|-- ConcreteFacade
+ConcreteFacade --> Subsystem1
+ConcreteFacade --> Subsystem2
+ConcreteFacade --> Subsystem3
+Client --> Facade
 
 @enduml

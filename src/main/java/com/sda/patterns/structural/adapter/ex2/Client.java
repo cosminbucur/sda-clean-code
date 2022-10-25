@@ -3,21 +3,14 @@ package com.sda.patterns.structural.adapter.ex2;
 public class Client {
 
     public static void main(String[] args) {
-        System.out.println("class adapter test");
-        TemperatureInfo tempInfo = new TemperatureObjectPresenter();
-        testTempInfo(tempInfo);
-        // object adapter
-        System.out.println("\nobject adapter test");
-        tempInfo = new TemperatureObjectPresenter();
-        testTempInfo(tempInfo);
+        SocketAdapter socketAdapter = new SocketClassAdapter();
+        Voltage regularVoltage = socketAdapter.get220Voltage();
+        System.out.println(regularVoltage);
+
+        System.out.println("---");
+
+        Voltage smallVoltage = socketAdapter.get110Volt();
+        System.out.println(smallVoltage);
     }
 
-    public static void testTempInfo(TemperatureInfo tempInfo) {
-        tempInfo.setTemperatureInC(0);
-        System.out.println("temp in C:" + tempInfo.getTemperatureInC());
-        System.out.println("temp in F:" + tempInfo.getTemperatureInF());
-        tempInfo.setTemperatureInF(85);
-        System.out.println("temp in C:" + tempInfo.getTemperatureInC());
-        System.out.println("temp in F:" + tempInfo.getTemperatureInF());
-    }
 }

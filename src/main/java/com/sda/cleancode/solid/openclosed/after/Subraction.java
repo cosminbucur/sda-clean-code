@@ -1,6 +1,6 @@
 package com.sda.cleancode.solid.openclosed.after;
 
-public class Subraction implements IOperation {
+public class Subraction implements Operation {
 
     private double firstOperand;
     private double secondOperand;

@@ -1,9 +1,9 @@
 package com.sda.cleancode.solid.openclosed.after;
 
-public class SimpleCalculator implements ICalculator {
+public class SimpleCalculator implements Calculator {
 
     @Override
-    public void calculate(IOperation operation) {
+    public void calculate(Operation operation) {
         if (operation == null) {
             throw new IllegalArgumentException("some message");
         }

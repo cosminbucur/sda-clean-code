@@ -1,10 +1,31 @@
 package com.sda.patterns.behavioral.iterator.ex1;
 
-public interface ProfileIterator {
+import java.util.List;
 
-    boolean hasNext();
+public class ProfileIterator implements SocialNetworkIterator {
 
-    Profile getNext();
+    private List<Profile> contacts;
 
-    void reset();
+    private int currentPosition = 0;
+
+    public ProfileIterator(Linkedin linkedin) {
+        this.contacts = linkedin.getContacts();
+    }
+
+    @Override
+    public boolean hasNext() {
+        return currentPosition < contacts.size();
+    }
+
+    @Override
+    public Profile next() {
+        if (!hasNext()) {
+            return null;
+        } else {
+            Profile profile = contacts.get(currentPosition);
+            currentPosition++;
+            return profile;
+        }
+    }
+
 }

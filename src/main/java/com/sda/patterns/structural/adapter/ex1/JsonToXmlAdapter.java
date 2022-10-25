@@ -1,6 +1,6 @@
 package com.sda.patterns.structural.adapter.ex1;
 
-public class JsonToXmlAdapter implements IDataAdapter {
+public class JsonToXmlAdapter implements DataAdapter {
 
     private Json json;
 

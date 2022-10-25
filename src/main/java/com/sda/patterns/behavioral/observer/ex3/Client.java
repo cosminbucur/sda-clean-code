@@ -3,10 +3,10 @@ package com.sda.patterns.behavioral.observer.ex3;
 public class Client {
 
     public static void main(String[] args) {
-        // create the zoo to store cars
+        // create the parking to store cars
         Parking parking = new Parking();
 
-        // register listeners to be notified when an car is added
+        // register listeners to be notified when a car is added
         CarAddedListener listener = car ->
                 System.out.println("Added a new car with name '" + car.getName() + "'");
         parking.register(listener);

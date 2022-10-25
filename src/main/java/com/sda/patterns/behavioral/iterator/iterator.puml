@@ -11,10 +11,10 @@ class ConcreteAggregate {
 }
 
 interface Iterator {
-+firstItem():void
-+nextItem():void
-+isDone():void
-+currentItem():void
++firstItem():Item
++nextItem():Item
++isDone():boolean
++currentItem():Item
 }
 
 class ConcreteIterator {

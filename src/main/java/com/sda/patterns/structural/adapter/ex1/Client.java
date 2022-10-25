@@ -5,8 +5,9 @@ public class Client {
     public static void main(String[] args) {
 
         Json json = new Json("some json data");
-        IDataAdapter adapter = new JsonToXmlAdapter(json);
-        Xml xml = adapter.convert(null);
+        DataAdapter adapter = new JsonToXmlAdapter(json);
+        Xml xml = adapter.convert(json);
+        System.out.println(xml);
     }
 
 }
