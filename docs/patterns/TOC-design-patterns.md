@@ -14,7 +14,8 @@
 
 # behavioral patterns
 - 🔍 [observer](behavioral/observer.md)
-- 🗺 [strategy](behavioral/strategy.md)
 - 🔁 [template method](behavioral/template-method.md)
+- 🗺 [strategy](behavioral/strategy.md)
+- ⏯ [state](behavioral/state.md)
 - 🆗 [command](behavioral/command.md)
-- 🚴 [itemIterator](behavioral/itemIterator.md)
+- 🚴 [iterator](behavioral/iterator.md)
