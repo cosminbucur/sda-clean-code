@@ -1,5 +1,3 @@
-# definition
-
 # intent
 
 # participants
@@ -11,3 +9,5 @@
 - [lambda](../pattern/challenge/Client.java)
 
 # jdk examples
+
+# spring examples

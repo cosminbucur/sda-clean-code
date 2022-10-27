@@ -8,10 +8,10 @@ public class Client {
 
     public static void main(String[] args) {
         List<String> list = List.of("b", "a", "c");
-        Consumer<List<String>> bubbleSort = bubbleList -> System.out.println("List sorted using Bubble sort implementation");
+        Consumer<List<String>> bubbleSort = bubbleList ->
+                System.out.println("List sorted using Bubble sort implementation");
         Function<List<String>, String> binarySearch = binaryList -> {
-            System.out.println("list is binary searched");
-            return null;
+            return getString("list is binary searched");
         };
         Context context = new Context(bubbleSort, binarySearch);
 
@@ -21,13 +21,16 @@ public class Client {
         System.out.println("---");
 
         Consumer<List<String>> quickSort = quickList -> System.out.println("List sorted using Quick sort implementation");
-        Function<List<String>, String> linearSearch = linearList -> {
-            System.out.println("list is linearly searched");
-            return null;
-        };
+        Function<List<String>, String> linearSearch =
+                linearList -> getString("list is linearly searched");
         context.setSortStrategy(quickSort);
         context.setSearchStrategy(linearSearch);
         context.sort(list);
         context.search(list);
+    }
+
+    private static String getString(String list_is_binary_searched) {
+        System.out.println(list_is_binary_searched);
+        return null;
     }
 }

@@ -14,7 +14,7 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 
 // given
-class AnActiveAdmin {
+class AnActiveAdminShould {
 
     @Mock
     private BookRepository bookRepository;

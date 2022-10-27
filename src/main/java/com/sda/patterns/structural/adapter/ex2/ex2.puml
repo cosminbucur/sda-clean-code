@@ -2,10 +2,6 @@
 
 class Client
 
-interface Target {
-+request():void
-}
-
 class Voltage {
 -volts:int
 }
@@ -13,12 +9,13 @@ class Voltage {
 class Socket {
 +getVoltage():Voltage
 }
-
+note left: adaptee
 
 interface SocketAdapter {
 +get220Voltage():void
 +get110Voltage():void
 }
+note left: target
 
 class SocketClassAdapter {
 +get220Voltage():void
@@ -26,16 +23,8 @@ class SocketClassAdapter {
 -convertVoltage(voltage:int, i:int)
 }
 
-class Adaptee {
-+specificRequest():void
-}
-
 SocketAdapter <|-- SocketClassAdapter
 Client --> SocketAdapter
 SocketClassAdapter --> Socket
-
-Target <|-- DataAdapter
-DataAdapter --> Adaptee
-Client --> Target
 
 @enduml

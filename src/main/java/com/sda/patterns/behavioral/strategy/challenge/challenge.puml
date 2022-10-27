@@ -1,18 +1,31 @@
 @startuml
 
-'TODO fix
-
 class Client
 
-interface Parent {
-+execute()
+interface PayStrategy {
++pay()
 }
 
-class Child {
-+execute()
+class Order {
+}
+note left: context
+
+class PayByPayPal {
++pay()
 }
 
-Parent <|-- Child
-Client --> Parent
+class PayByCreditCard {
++pay()
+}
+
+class Card {
+}
+
+PayStrategy <|-- PayByPayPal
+PayStrategy <|-- PayByCreditCard
+PayByCreditCard --> Card: uses
+Order o--> PayStrategy
+Client --> Order
+
 
 @enduml

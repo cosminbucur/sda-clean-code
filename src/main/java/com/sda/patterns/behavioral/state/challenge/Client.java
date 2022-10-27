@@ -8,6 +8,7 @@ public class Client {
 		context.update();
 		context.update();
 		context.update();
+		context.update();
 	}
 
 }

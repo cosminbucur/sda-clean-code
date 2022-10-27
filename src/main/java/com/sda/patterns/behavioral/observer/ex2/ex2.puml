@@ -17,7 +17,7 @@ class Parking {
 note top: subject
 
 interface CarAddedListener {
-+update()
++onCarAdded(car:Car)
 }
 note left: listener
 
